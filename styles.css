@@ -1,0 +1,129 @@
+:root {
+    --main-blue : rgb(10, 31, 66, 1);
+    --main-white: rgba(234, 237, 242, 1);
+    --main-grey: rgba(139, 143, 148, 1);
+    --main-orange: rgba(226, 152, 24,1);
+}
+
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    height: 100%;
+    background-color: var(--main-blue);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--main-white);
+}
+
+
+
+/* Navigation styles */
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    display: inline-block;  
+    width: 100%;
+    text-align: right;  
+    padding-top: 2rem;
+    padding-right: 2rem;   
+}
+
+.nav-bar a {
+    padding-right: 1.3rem;
+    text-decoration: none;
+    color: var(--main-white);
+    margin-right: 1rem;
+    
+}
+
+.nav-bar a:hover {
+    color: var(--main-orange);
+    transition: color 0.5s ease-in;
+}
+
+#resume {
+    font-size: 0.9rem;
+    color: var(--main-orange);
+    padding: .5rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--main-orange);
+    border-radius: 5%;
+    margin-right: 3rem;
+}
+
+#resume:hover {
+    background-color: rgba(226, 152, 24,.2);
+    transition: background-color 0.5s ease-in;
+}
+
+.alt-color {
+    color: var(--main-orange);
+}
+    
+/* Icon styles */
+
+/* Content styles */
+
+.container {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 20% 60% 15%;
+    grid-row-gap: 50px;
+    background-color: var(--main-white); 
+    background-color: var(--main-blue);
+    align-items: center;   
+    
+}
+.cols {
+    display: grid;
+    grid-auto-rows: 75vh;
+    
+}
+
+
+/* Intro */
+.intro {
+    font-size: 1rem;
+    align-content: center;
+    line-height: 70%;
+}
+
+.intro #name {
+    font-weight: 600;
+    font-size: 4.5rem;
+}
+
+.intro #introduction {
+    font-size: 4.5rem;
+    color: var(--main-grey);
+}
+
+/* About */
+
+.main.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+.skills-list {
+    column-count: 2; 
+    list-style-type: square;
+}
+
+#me {
+    width:100%;
+}
+
+/* work */
+
+#work {
+    align-items: center;
+    justify-content: center;
+}

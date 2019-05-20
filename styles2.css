@@ -1,0 +1,275 @@
+:root {
+    --main-blue : rgb(10, 31, 66, 1);
+    --main-white: rgba(234, 237, 242, 1);
+    --main-grey: rgba(139, 143, 148, 1);
+    --main-orange: rgba(226, 152, 24,1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    height: 100%;
+    background-color: var(--main-blue);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--main-grey);
+}
+
+
+
+/* Navigation styles */
+
+.nav-bar {
+    background-color: var(--main-blue);
+    position: fixed;
+    top: 0;
+    display: inline-block;  
+    width: 100%;
+    text-align: right;  
+    padding-top: 2rem;
+    padding-right: 2rem; 
+    padding-bottom: 1rem;      
+    /* box-shadow: 2px 2px black; */
+    z-index: 3;
+    
+    font-family: 'Lekton', sans-serif;
+}
+
+.nav-bar a {
+    padding-right: 1.3rem;
+    text-decoration: none;
+    color: var(--main-white);
+    margin-right: 1rem;
+    
+}
+
+nav a:hover {
+    color: var(--main-orange);
+    transition: color 0.5s ease-in;
+}
+
+.nav-bar a.current {
+    color: var(--main-orange);
+}
+
+#resume {
+    font-size: 0.9rem;
+    color: var(--main-orange);
+    padding: .5rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--main-orange);
+    border-radius: 5%;
+    margin-right: 3rem;
+}
+
+#resume:hover {
+    background-color: rgba(226, 152, 24,.2);
+    transition: background-color 0.5s ease-in;
+}
+
+.alt-color {
+    color: var(--main-orange);
+}
+
+.alt-text {    
+    font-family: 'Lekton', sans-serif;
+    margin-bottom: 1%;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+/* icons */
+
+.left-col {
+    width: 20%;
+    flex: 0 0 auto; 
+    color: var(--main-white);    
+}
+
+.fa-github {
+    padding-bottom: 9rem;
+}
+
+.fa-xing {
+    padding-bottom: 3rem;
+}
+
+.fa-linkedin-in {
+    padding-bottom: 6rem;
+}
+
+
+
+.fab, .fas, .line {
+    color: white;
+    position: fixed;
+    bottom: 8rem;
+    left: 4rem;
+    text-align: center;
+}
+
+.fab:hover, .fas:hover {
+    color: var(--main-orange);
+    transition: .5s color ease-in;
+}
+
+.line {
+    border-left: solid 1px;
+    border-color: var(--main-white);
+    height: 100px;
+    bottom: 0;
+    left:4.5rem;
+}
+
+.right-col {
+    width: 20%;
+    flex: 0 0 auto;
+    
+}
+
+.cols {
+    flex: 1 1 auto; 
+    /* font-family: 'Lato', sans-serif;  */
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1.5;
+}
+
+
+.intro {
+    padding-top: 20%;
+    min-height: 85vh;
+}
+
+
+
+.main.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    min-height: 85vh;
+}
+
+.work {
+    min-height: 70vh;
+    
+}
+
+
+/* Intro */
+.intro {
+    font-size: 1rem;
+    align-content: center;
+    
+}
+
+.intro #name {
+    font-size: 4.5rem;
+    color: var(--main-white);
+}
+
+.intro #introduction {
+    font-size: 4.5rem;
+    color: var(--main-grey);
+}
+
+.about-me-img {
+    position: relative;
+    width: 60%;
+}
+
+#me {
+    display: block;
+    width: 100%;
+    float: right;
+}
+
+.img-overlay {
+    position: absolute;
+    background-color: var(--main-orange);
+    width: 100%;
+    opacity: .2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;    
+}
+
+.img-overlay:hover {
+    opacity: 0;
+    transition: opacity .5s ease-out;
+}
+
+.box-under {
+   /* fix this */
+}
+
+.skills-list {
+    column-count: 2; 
+    list-style-type: square;
+}
+
+
+.contact-text {
+    text-align: center;
+    margin: auto;
+    width: 65%;
+    padding: 2rem;
+    margin-top: 1rem;
+       
+}
+
+.contact-btn-container {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    margin-bottom: 20%;
+}
+
+#contact-btn {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--main-orange);
+    padding: .8rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--main-orange);
+    border-radius: 5%;    
+}
+
+#contact-btn:hover {
+    background-color: rgba(226, 152, 24,.2);
+    transition: background-color 0.5s ease-in;
+}
+
+.contact {
+    min-height: 40vh;
+}
+
+
+footer {
+    background-color: var(--main-blue);
+    color: var(--main-white);
+    padding: 1rem;
+    
+    text-align: center;
+    font-family: 'Lekton', sans-serif;
+}
+
+h1 {
+    color: var(--main-white);
+}
