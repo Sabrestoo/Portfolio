@@ -14,7 +14,9 @@ window.addEventListener("scroll", event => {
   
   mainNavLinks.forEach(link => {
     
-    let section = document.querySelector('a'.href);
+    let section = document.querySelector(
+      
+    );
    
     if (
       section.offsetTop <= fromTop &&
