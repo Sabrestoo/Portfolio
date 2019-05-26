@@ -7,123 +7,135 @@
 
 * {
     box-sizing: border-box;
-    
+    margin: 0;
+    padding: 0;    
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 
 body {
     height: 100%;
     background-color: var(--main-blue);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--main-white);
-}
-
-
-
-/* Navigation styles */
-
-.nav-bar {
-    position: fixed;
-    top: 0;
-    display: inline-block;  
-    width: 100%;
-    text-align: right;  
-    padding-top: 2rem;
-    padding-right: 2rem;   
-}
-
-.nav-bar a {
-    padding-right: 1.3rem;
-    text-decoration: none;
-    color: var(--main-white);
-    margin-right: 1rem;
-    
-}
-
-.nav-bar a:hover {
-    color: var(--main-orange);
-    transition: color 0.5s ease-in;
-}
-
-#resume {
-    font-size: 0.9rem;
-    color: var(--main-orange);
-    padding: .5rem;
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--main-orange);
-    border-radius: 5%;
-    margin-right: 3rem;
-}
-
-#resume:hover {
-    background-color: rgba(226, 152, 24,.2);
-    transition: background-color 0.5s ease-in;
-}
-
-.alt-color {
-    color: var(--main-orange);
-}
-    
-/* Icon styles */
-
-/* Content styles */
-
-.container {
-    margin-top: 200px;
-    display: grid;
-    grid-template-columns: 20% 60% 15%;
-    grid-row-gap: 50px;
-    background-color: var(--main-white); 
-    background-color: var(--main-blue);
-    align-items: center;   
-    
-}
-.cols {
-    display: grid;
-    grid-auto-rows: 75vh;
-    
-}
-
-
-/* Intro */
-.intro {
-    font-size: 1rem;
-    align-content: center;
-    line-height: 70%;
-}
-
-.intro #name {
-    font-weight: 600;
-    font-size: 4.5rem;
-}
-
-.intro #introduction {
-    font-size: 4.5rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--main-grey);
 }
 
-/* About */
 
-.main.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem;
-    align-items: center;
-    justify-items: center;
-}
 
-.skills-list {
-    column-count: 2; 
-    list-style-type: square;
-}
+@media screen and (max-width: 580px) {
 
-#me {
-    width:100%;
-}
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-blue);
+        visibility: hidden;
+      }
 
-/* work */
+      .nav-bar a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: var(--main-white);
+        margin-top: 1rem;
+        text-align: center;
+        
+    }
+    
+    nav a:hover {
 
-#work {
-    align-items: center;
-    justify-content: center;
+        color: var(--main-orange);
+        transition: color 0.5s ease-in;
+    }
+    
+    .nav-bar a.current {
+        color: var(--main-orange);
+    }
+    
+    #resume {
+        font-size: 0.9rem;
+        color: var(--main-orange);        
+        border-style: solid;
+        border-width: 1px;
+        border-color: var(--main-orange);
+        border-radius: 5%;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    
+    #resume:hover {
+        background-color: rgba(226, 152, 24,.2);
+        transition: background-color 0.5s ease-in;
+    }
+
+    .menuButton {
+        position: absolute;
+        z-index: 3;
+        right: 35px;
+        top: 35px;
+        transition: 0.5s ease-out;        
+    }
+
+    .menuButton .btnLine {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: var(--main-white);
+      }
+      
+      .menuButton.close {
+        transform: rotate(180deg);
+      }
+    
+      
+      .menuButton.close .btnLine:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .menuButton.close .btnLine:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .menuButton.close .btnLine:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+      .menuButton.close + .nav-bar {
+        visibility: visible;
+      }
+      
+      .menuButton.close + .nav-bar  {
+        transform: scale(1);
+        transition-duration: 1s;
+      }
+    
+      /* container */
+
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .cols {
+        margin-top: 3rem;
+    }
+
+    /* icons */
+
+    .left-col {
+        margin-top: 2rem;
+        color: var(--main-white);
+        width: 100%;
+     }
+
 }

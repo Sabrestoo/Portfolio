@@ -63,17 +63,21 @@ nav a:hover {
 #resume {
     font-size: 0.9rem;
     color: var(--main-orange);
-    padding: .5rem;
+    padding: 0.5rem 1rem;
     border-style: solid;
     border-width: 1px;
     border-color: var(--main-orange);
     border-radius: 5%;
-    margin-right: 3rem;
+    margin-right: 1rem;
 }
 
 #resume:hover {
     background-color: rgba(226, 152, 24,.2);
     transition: background-color 0.5s ease-in;
+}
+
+.alt-grey {
+    color: var(--main-grey);
 }
 
 .alt-color {
@@ -99,8 +103,8 @@ nav a:hover {
     color: var(--main-white);    
 }
 
-.fa-github {
-    padding-bottom: 9rem;
+.fa-github  {
+    margin-bottom: 9rem;
 }
 
 .fa-xing {
@@ -110,8 +114,6 @@ nav a:hover {
 .fa-linkedin-in {
     padding-bottom: 6rem;
 }
-
-
 
 .fab, .fas, .line {
     color: var(--main-white);
@@ -123,8 +125,28 @@ nav a:hover {
 
 .fab:hover, .fas:hover {
     color: var(--main-orange);
-    transition: .5s color ease-in;
+    transition: .5s color ease-in;    
 }
+
+
+/* .tooltip-text {
+    font-size: 16px;
+    visibility: hidden;
+    width: auto;
+    background-color: var(--main-blue);
+    color: var(--main-white);
+    text-align: center;
+    border-radius: 5%;
+    padding: 3px;
+    line-height: 0.5;
+    position: absolute;
+    z-index: 2;
+    left: 2rem;
+}
+
+.fab:hover .tooltip-text {
+    visibility: visible;
+} */
 
 .line {
     border-left: solid 1px;
@@ -153,6 +175,15 @@ nav a:hover {
     min-height: 85vh;
 }
 
+#introduction {
+    margin-bottom: 2rem;
+}
+
+.intro .alt-grey {
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
 
 
 .main.about {
@@ -164,9 +195,13 @@ nav a:hover {
     min-height: 85vh;
 }
 
-.work {
-    min-height: 70vh;
-    
+.main.work {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    min-height: 85vh;    
 }
 
 
@@ -264,12 +299,87 @@ nav a:hover {
 footer {
     background-color: var(--main-blue);
     color: var(--main-white);
-    padding: 1rem;
-    
-    text-align: center;
-    font-family: 'Lekton', sans-serif;
+    padding: 1rem;    
+    text-align: center;   
+    font-size: .8rem; 
 }
 
 h1 {
     color: var(--main-white);
+}
+
+@media screen and (max-width: 580px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 auto;
+        padding: 0 .5rem;
+    }
+    
+    .left-col {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 auto;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .cols, .main {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+        
+    
+    .fab, .fas, .line {
+        color: var(--main-white);
+        position: unset;
+        bottom: unset;
+        left: unset;
+        text-align: center;
+    }
+    
+    .fab:hover, .fas:hover {
+        color: var(--main-orange);
+        transition: .5s color ease-in;
+    }
+    
+      
+    .right-col {
+        display: none; 
+    }
+
+
+
+    .main.about {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .about-me-img {
+        width: 40%;
+    }
+
+    .about-me-text {
+        margin: 2rem 1rem;
+    }
+
+    .skills-list {
+        column-count: 1;
+        text-align: center;
+        list-style-type: none;
+    }
+
+    .contact-text {
+        width: 100%;
+        padding: 1rem;
+    }
+
+   
+
+    
 }
