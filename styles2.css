@@ -27,6 +27,13 @@ body {
 
 /* Navigation styles */
 
+#logo {
+    width:100px;
+    height:100px;
+    position: fixed;
+    left: 0;
+}
+
 .nav-bar {
     background-color: var(--main-blue);
     position: fixed;
@@ -61,7 +68,7 @@ nav a:hover {
 }
 
 #resume {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--main-orange);
     padding: 0.5rem 1rem;
     border-style: solid;
@@ -222,6 +229,16 @@ nav a:hover {
     color: var(--main-grey);
 }
 
+/* about me */
+
+.about-me-text h1 {
+    margin-bottom: 1rem;
+}
+
+.about-me-text p{
+    margin-bottom: 1rem;
+}
+
 .about-me-img {
     position: relative;
     width: 60%;
@@ -256,16 +273,22 @@ nav a:hover {
 .skills-list {
     column-count: 2; 
     list-style-type: square;
+    width: 80%;
+    margin: auto;
 }
 
+/* contact */
 
 .contact-text {
     text-align: center;
     margin: auto;
     width: 65%;
     padding: 2rem;
-    margin-top: 1rem;
-       
+    margin-bottom: 1rem;       
+}
+
+.contact-text h1 {
+    margin-bottom: 1rem;
 }
 
 .contact-btn-container {
@@ -294,7 +317,6 @@ nav a:hover {
 .contact {
     min-height: 40vh;
 }
-
 
 footer {
     background-color: var(--main-blue);
