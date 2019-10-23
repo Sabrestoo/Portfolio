@@ -9,26 +9,37 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Lato|Lekton:700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-theme='dark'>
 
     
 <div class="container">
-        <div class="menuButton">
-                <div class="btnLine"></div>
-                <div class="btnLine"></div>
-                <div class="btnLine"></div>
-              </div>
-        <nav class="nav-bar">
-            <!-- <img src="" id="logo"> -->
+        <nav class="nav-bar" id="nav-bar">
+                <div class="bars" id="bars">    
+                        <div id="bar1"></div>
+                        <div id="bar2"></div>
+                        <div id="bar3"></div>
+                    </div>
+                
+                <a href="#"><svg id="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1468.71 1449.24"><defs></defs><title>Stuart Summers</title><polygon class="cls-1" points="1111.71 652.54 1234 653.36 1234 796.44 1113.46 796 1111.71 652.54"/><polygon class="cls-1" points="1335.65 653.85 1213 653.36 1213 655.44 1172.87 654.92 1172.83 654.13 1146 654.05 1146 654.58 1058 653.44 1058 796 1146 796.42 1146 797.09 1187.99 797.06 1190 797.07 1190 797.06 1258 797.01 1258 796.91 1335.28 797.22 1333.46 1316.02 134.4 1311.18 136 931.99 3.35 931.46 1.3 1443.34 1465.89 1449.24 1468.71 655.01 1335.65 653.85"/><polygon class="cls-1" points="3.71 0 0.76 654.44 0 654.44 0 793.44 0.14 793.44 0.13 794.34 53.55 794.81 53.59 796 394 796.44 394 653.36 330 653.2 330 652.3 209 652.33 209 652.43 132.87 652.08 135.51 133.29 1334.86 138.7 1333.22 517.89 1465.94 518.49 1468.27 6.61 3.71 0"/><path class="cls-1" d="M1793.5,2070.55c41,21,104,42,169,42,70,0,107-29,107-73,0-42-32-66-113-95-112-39-185-101-185-199,0-115,96-203,255-203,76,0,132,16,172,34l-34,123c-27-13-75-32-141-32s-98,30-98,65c0,43,38,62,125,95,119,44,175,106,175,201,0,113-87,209-272,209-77,0-153-20-191-41Z" transform="translate(-1263 -1165.56)"/></svg></a>
+                <!-- Dark mode toggle to fix -->
+                <!-- <button type="button" name="dark-toggle" class="dark-toggle">Dark Mode</button> -->
+                    
+            
+            <div class="links" id="links">
                 <a href="#" class="link">
                 <a href="#about" class="link"><span class="alt-color">01.</span> About</a>
-                <!-- <a href="#" class="link"><span class="alt-color">02.</span> Experience</a> -->
                 <a href="#work" class="link"><span class="alt-color">02.</span> Projects</a>
                 <a href="#contact-btn" class="link"><span class="alt-color">03.</span> Contact</a>
-                <a href="#resume" class="link" id="resume">Resume</a>
-            
+                <a href="../images/sscv.pdf" class="link" id="resume" target="_blank">Resume</a>
+                <div class="icons-container">
+                <a href="https://github.com/Sabrestoo?tab=repositories" target='blank'><i class="fab fa-github fa-lg icon icons2"></i></a>
+                <a href="https://www.linkedin.com/in/summers2483" target="blank"><i class="fab fa-linkedin-in fa-lg icon icons2"></i></a>
+                <a href="https://www.xing.com/profile/Stuart_Summers/cv?sc_o=mxb_p" target='blank'><i class="fab fa-xing fa-lg icon icons2"></i></a>
+                <a href="mailto:summers2483@gmail.com" ><i class="fas fa-at fa-lg icon icons2"></i></a>
+                </div>
+                </div>
         </nav>
-    <div class="left-col">
+    <div class="left-col" id="left-col">
         <a href="https://github.com/Sabrestoo?tab=repositories" target='blank'><i class="fab fa-github fa-lg icon"></i></a>
         <a href="https://www.linkedin.com/in/summers2483" target="blank"><i class="fab fa-linkedin-in fa-lg icon"></i></a>
         <a href="https://www.xing.com/profile/Stuart_Summers/cv?sc_o=mxb_p" target='blank'><i class="fab fa-xing fa-lg icon"></i></a>
@@ -42,24 +53,23 @@
         <div class="main intro"><p class="alt-text alt-color">Hi, my name is</p> 
             <p id="name">Stuart Summers.</p> 
             <p id="introduction">I'm a software developer.</p>
-            <!-- <p class="alt-grey">I'm a software developer based in Berlin, Germany.</p> -->
             <p class="alt-grey">I design and build exceptional,</p>
-            <p class="alt-grey">high-quality websites and applications.</p>
-            
-            
+            <p class="alt-grey">high-quality websites and applications.</p>   
+ 
         </div>
 
         <!-- About -->
         <div class="main about" id="about">
-            <div class="about-me-text">
-                <h1><span class="alt-color alt-text">01.</span> About Me</h1>
+                <h1 class="section-title"><span class="alt-color alt-text">01.</span> About Me</h1>
+            <div class="about-wrapper">               
+                 <div class="about-me-text">               
         
-                <p>Hello! I’m Stuart, a passionate software developer based in Berlin, Germany who enjoys building things that live on the internet.</p>
+                <p>Hello! I’m Stuart, a passionate software developer based in Berlin, Germany who enjoys building things that live on the internet.
 
-               <p>Currently in the final spurt of a bachelor’s degree in Computer Science, I’m a highly motivated and avid learner interested in continually advancing my skills and tackling development challenges.</p>
+               Currently in the final year of a bachelor’s degree in Computer Science, I’m a highly motivated and avid learner interested in continually advancing my skills and tackling development challenges.
                         
-               <p> When I’m not designing, coding or solving problems, you’ll find me boxing, cooking or travelling the world.</p>
-                                    
+                When I’m not designing, coding or solving problems, you’ll find me boxing, cooking or travelling the world.</p>
+                <br>                 
                 <p>A few technologies I've been working with recently:</p>
                 <ul class="skills-list alt-text">
                     <li>JavaScript</li>
@@ -75,28 +85,67 @@
                 
             </div>
             <div class="about-me-img">    
-                <img src="images/portrait.png" alt="" id="me">
+                <img src="images/StuSqP2.jpg" alt="" id="me">
                 <div class="img-overlay"></div>
                 <div class="box-under"></div>
+            </div>
             </div>
         </div>
 
 
-        <div class="main work" id="work"><h1><span class="alt-color alt-text">02. </span>Some Things I've Built</h1></div>
+        <div class="main work" id="work"><h1 class="section-title"><span class="alt-color alt-text">02. </span>Some Things I've Built</h1>
+           <div class="work-container">
+                <div class="project" id="project1">
+                        <div class="projectImg"><img src="images/folder-icons/folder-128.svg" alt="folder icon" class="folder-icon"></div>
+                     <div class="projectTitle">This is a title</div>
+                     <!-- Github link -->            
+                     <div class="projectDesc">This is a project description</div>
+                     <!-- Code font for languages -->
+                     <div class="projectLanguages">HTML CSS JS</div>
+                 </div>
+                 <div class="project" id="project1">
+                        <div class="projectImg"><img src="images/folder-icons/folder-128.svg" alt="folder icon" class="folder-icon"></div>
+                     <div class="projectTitle">This is a title</div>
+                     <!-- Github link -->            
+                     <div class="projectDesc">This is a project description</div>
+                     <!-- Code font for languages -->
+                     <div class="projectLanguages">HTML CSS JS</div>
+                 </div>
+                 <div class="project" id="project1">
+                        <div class="projectImg"><img src="images/folder-icons/folder-128.svg" alt="folder icon" class="folder-icon"></div>
+                     <div class="projectTitle">This is a title</div>
+                     <!-- Github link -->            
+                     <div class="projectDesc">This is a project description</div>
+                     <!-- Code font for languages -->
+                     <div class="projectLanguages">HTML CSS JS</div>
+                 </div>
+                 <div class="project" id="project1">
+                        <div class="projectImg"><img src="images/folder-icons/folder-128.svg" alt="folder icon" class="folder-icon"></div>
+                     <div class="projectTitle">This is a title</div>
+                     <!-- Github link -->            
+                     <div class="projectDesc">This is a project description</div>
+                     <!-- Code font for languages -->
+                     <div class="projectLanguages">HTML CSS JS</div>
+                 </div>
+
+        </div>
+    </div>
+
+    
         <div class="main contact" id="contact">
-            <div class="contact-text">
-            <h1><span class="alt-color alt-text">03. </span>Get In Touch</h1>
+                <h1 class="section-title"><span class="alt-color alt-text">03. </span>Get In Touch</h1>
+            <div class="contact-text">            
                 <p>Have a project, idea or problem you'd like to discuss? Let’s chat!</p> 
             </div>
             <div class="contact-btn-container">
-            <a href="#" class="link alt-text" id="contact-btn">Say Hello</a>
+            <a href="mailto:summers2483@gmail.com" class="link alt-text" id="contact-btn">Say Hello</a>
             </div>
         </div>
 
         <footer>&copy; 2019 Stuart Summers</footer>
         
     </div>
-    <div class="right-col"></div>
+
     
 </div>
 
