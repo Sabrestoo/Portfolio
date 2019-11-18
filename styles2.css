@@ -48,6 +48,14 @@ h1 {
   padding-bottom: 2rem;
 }
 
+div.project-icon-container {
+  float: right;
+}
+
+.project-icon-container a {
+  color:rgba(234, 237, 242, 1);
+  color: var(--main-text);
+}
 
 /* logo */
 
@@ -161,6 +169,7 @@ h1 {
   }
 
   .icons2 {
+    display: block;
     padding: 15%;
   }
 
@@ -419,31 +428,27 @@ h1 {
 
 /* icons */
 
-.icons {
-  display: none;
-}
-
 .left-col {
-    width: 20%;
+    width: 12%;
     flex: 0 0 auto; 
     color:rgba(234, 237, 242, 1);
     color: var(--main-text);    
 }
 
-.fa-github  {
-    margin-bottom: 9rem;
+.gh-icon {
+  margin-bottom: 9rem;
 }
 
-.fa-xing {
-    padding-bottom: 3rem;
+.xing-icon {
+  padding-bottom: 3rem;
 }
 
-.fa-linkedin-in {
-    padding-bottom: 6rem;
+.li-icon {
+  padding-bottom: 6rem;
 }
 
-.fab, .fas, .line {
-  color:rgba(234, 237, 242, 1);
+.gh-icon, .li-icon, .xing-icon, .mail-icon, .line {
+    color:rgba(234, 237, 242, 1);
     color: var(--main-text);
     position: fixed;
     bottom: 8rem;
@@ -626,10 +631,12 @@ h1 {
     padding: 1rem;
     justify-self: center;
   }
+
+ 
   
   .projectImg {
-    min-height: 100px;
-    max-width: 90%;
+    min-height: 50px;
+    max-width: 75%;
     border-radius: 5px;
     margin: auto;
   }
