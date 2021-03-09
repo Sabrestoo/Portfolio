@@ -65,6 +65,10 @@ function closeNav() {
   }
 }
 
+footerDate = document.querySelector('#copyDate');
+date = new Date().getFullYear();
+footerDate.innerText = date;
+
 //Dark mode toggle
 // let darkModeToggle = document.querySelector('.dark-toggle');
 
